@@ -1,0 +1,88 @@
+<h2>Show Info</h2>
+<div *ngFor="let item of current">
+  <br>
+  <section>
+      <div>
+        <strong>ShowName: </strong> 
+        <img [src]='item.image'> {{item.name}}                        
+        <span>({{item.id}})</span>
+      </div>
+      <div>
+        <strong>Language:</strong> {{item.language}}
+      </div>
+      <div>
+        <strong>Schedule:</strong>
+        <span *ngFor = "let g2 of item.days">
+          {{g2}}
+        </span> at {{item.time}}
+      </div>
+      <div>
+        <strong>Runtime:</strong> {{item.runtime}} minutes
+      </div>
+      <div>
+        <strong>Genres: </strong>
+        <span *ngFor="let g1 of item.genre">{{g1}} </span>
+      </div>
+      <div>
+        <strong>Episodes ordered:</strong> 
+        ABC                    
+      </div>
+      <div>
+        <strong>Created by:</strong>
+        <span class="divider">
+        <span><a href="/people/27410/lena-dunham">Lena Dunham</a></span>
+        </span>
+      </div>
+      <div>
+        <strong>Official site:</strong> 
+        <a href="http://www.hbo.com/girls" target="_blank">www.hbo.com</a>
+      </div>
+    </section>
+</div>
+
+
+<!-- <form>
+  <div *ngFor="let item of current">
+      <mat-grid-list cols="8" rowHeight="2:1">
+      <mat-grid-tile>{{item.id}}</mat-grid-tile>
+      <mat-grid-tile>{{item.name}}</mat-grid-tile>
+      <mat-grid-tile>{{item.language}}</mat-grid-tile>
+      <mat-grid-tile>
+        <ul>
+          <li *ngFor="let g1 of item.genre">
+            {{g1}}
+          </li>
+        </ul>
+      </mat-grid-tile>
+      <mat-grid-tile>{{item.runtime}}</mat-grid-tile>
+      <mat-grid-tile>{{item.time}}</mat-grid-tile>
+      <mat-grid-tile>
+        <div *ngFor = "let g2 of item.days">
+          {{g2}}
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img [src] = 'item.image'>
+      </mat-grid-tile>
+    </mat-grid-list>
+    </div>
+  
+</form> -->
+<!-- <section class="row">
+    <article style="height:80%; width: 30%; border: solid 1px black">
+      <div style="overflow: auto;">
+        <img [src] = 'item.image'/>
+        
+          {{item.name}}
+          <ul>
+          <li *ngFor="let g1 of item.genre">
+            {{g1}}
+          </li>
+        </ul>
+        {{item.runtime}}minutes,{{item.time}}
+        <div *ngFor = "let g2 of item.days">
+          {{g2}}
+        </div>
+    </div>
+    </article>
+  </section> -->
