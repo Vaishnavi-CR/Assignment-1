@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ITvDataforUI } from '../itv-datafor-ui';
 import { TvMazeDataService } from '../tv-maze-data.service'
 
@@ -8,12 +8,11 @@ import { TvMazeDataService } from '../tv-maze-data.service'
   styleUrls: ['./tv-app.component.css']
 })
 export class TvAppComponent implements OnInit {
-
-  current: ITvDataforUI[]
+  @Input() current: ITvDataforUI[]
   constructor(private tvService: TvMazeDataService) { }
 
   ngOnInit() {
-    this.tvService.getTVData('india').subscribe(dummydata => this.current = dummydata);
+    
     
   }
   
