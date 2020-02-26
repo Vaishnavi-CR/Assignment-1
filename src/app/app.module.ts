@@ -16,14 +16,36 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { MatGridListModule } from '@angular/material/grid-list'
+import { RouterModule, Routes } from '@angular/router';
+import { PeopleDetailsComponent } from './people-details/people-details.component';
+import { NetworkDetailsComponent } from './network-details/network-details.component';
+import { WebChannelsDetailsComponent } from './web-channels-details/web-channels-details.component';
+import { ShowsComponent } from './shows/shows.component';
+
+const appRoutes: Routes = [
+  { path: 'Shows', component: ShowsComponent },
+  { path: 'People',component: PeopleDetailsComponent },
+  { path: 'Networks', component:NetworkDetailsComponent },
+  { path: 'WebChannels',component: WebChannelsDetailsComponent }
+  
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     TvAppComponent,
-    ShowSearchComponent
+    ShowSearchComponent,
+    PeopleDetailsComponent,
+    NetworkDetailsComponent,
+    WebChannelsDetailsComponent,
+    ShowsComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
+    RouterModule.forChild(appRoutes),
     BrowserModule, 
     HttpClientModule,    
     BrowserAnimationsModule,

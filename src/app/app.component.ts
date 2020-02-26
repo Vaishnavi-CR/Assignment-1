@@ -10,11 +10,5 @@ import { TvMazeDataService } from './tv-maze-data.service';
 export class AppComponent {
   title = 'TV-Maze-App-New';
 
-  currentTvData: ITvDataforUI[];
-  constructor(private tvService: TvMazeDataService) { }
-
-  doSearch(fieldValue){
-      this.tvService.getTVData(fieldValue).subscribe(data => this.currentTvData = data);
-  }
   
 }

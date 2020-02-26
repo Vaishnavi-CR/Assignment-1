@@ -12,8 +12,5 @@ export class TvAppComponent implements OnInit {
   constructor(private tvService: TvMazeDataService) { }
 
   ngOnInit() {
-    
-    
   }
-  
 }

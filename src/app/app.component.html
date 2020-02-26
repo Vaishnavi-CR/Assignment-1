@@ -4,17 +4,16 @@
     <title>TV Maze App</title>
   </head>
   <body>
-    <h1>Welcome</h1>
-    <div>
-      <mat-card>
-        <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
-      </mat-card>
-    </div>
-    <div>
-      <mat-card>
-      <app-tv-app [current]="currentTvData"></app-tv-app>
-    </mat-card>
-    </div>
+    
+    <h1>Welcome to Tv Maze!</h1>
+    
+    <ul>
+      <li><a routerLink="/Shows" routerLinkActive="active">Shows</a></li>
+      <li><a routerLink="/People" routerLinkActive="active">People</a></li>    
+      <li><a routerLink="/Networks" routerLinkActive="active">Networks</a></li>     
+      <li><a routerLink="/WebChannels" routerLinkActive="active">WebChannels</a></li>
+    </ul>
+    <router-outlet></router-outlet>
     
   </body>
 </html>

@@ -19,13 +19,13 @@ export class ShowSearchComponent implements OnInit {
 
   ngOnInit() {
     this.i = 0;
+  
   }
 
   searchBoxBlur() {
     if (!this.searchbox.invalid && this.searchbox.value) {
       this.fieldValue=this.searchbox.value
       this.searchEvent.emit(this.fieldValue)
-      
     }
   }
 }
