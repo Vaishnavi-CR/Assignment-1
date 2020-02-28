@@ -4,11 +4,26 @@ export interface ITvDatafromAPI {
     name: string,
     language: string,
     genres: string[],
-    runtime: number,
+    runtime: number | string,
     schedule: {
               time:string,
               days:string[]
               },
-    image: { medium: string } | null
+    image: { medium: string } | null,
+    network: {
+      country:{
+        timezone: string
+      }
+    },
+    webChannel: {
+      country:{
+        timezone: string
+      }
+    },
+    rating: {
+      average: string
+    },
+    status: string
+
   }
 }

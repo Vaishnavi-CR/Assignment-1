@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  dummyUrl: 'http://api.tvmaze.com'
+  dummyUrl: 'http://api.tvmaze.com',
+  appId:'URSEopB1VDsPZ7gbBaDpapwnqkbxWF56'
 };
 
 /*

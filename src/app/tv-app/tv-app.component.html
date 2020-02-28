@@ -1,3 +1,7 @@
+<div *ngIf="current.length === 0">
+  <br>
+  <p>Sorry, the details of this show is unavailable!</p>
+</div>
 
 <div *ngFor="let item of current">
   <br>
@@ -11,34 +15,35 @@
         <strong>Language:</strong> {{item.language}}
       </div>
       <div>
-        <strong>Schedule:</strong>
+        <strong>Days:</strong>
         <span *ngFor = "let g2 of item.days">
           {{g2}}
-        </span> at {{item.time}}
+        </span>
       </div>
       <div>
-        <strong>Runtime:</strong> {{item.runtime}} minutes
+        <strong>Time-Timezone: </strong> {{item.time}}  {{item.timezone}}
+      </div>
+      <div>
+        <strong>Runtime: </strong>{{item.runtime}} minutes
       </div>
       <div>
         <strong>Genres: </strong>
         <span *ngFor="let g1 of item.genre">{{g1}} </span>
       </div>
       <div>
-        <strong>Episodes ordered:</strong> 
-        ABC                    
+        <strong>Rating:</strong> 
+        {{item.rating}}                    
       </div>
       <div>
-        <strong>Created by:</strong>
-        <span class="divider">
-        <span><a href="/people/27410/lena-dunham">Lena Dunham</a></span>
-        </span>
+        <strong>Status:</strong>
+        {{item.status}}
       </div>
-      <div>
-        <strong>Official site:</strong> 
-        <a href="http://www.hbo.com/girls" target="_blank">www.hbo.com</a>
-      </div>
+     
     </section>
 </div>
+
+
+
 
 <!-- <form>
   <div *ngFor="let item of current">
